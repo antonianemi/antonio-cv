@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Antonio de Jesús Cortes Lagunes - Software Architect & Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f7;
+      color: #222;
+      line-height: 1.5;
+    }
+
+    .page {
+      max-width: 1000px;
+      margin: 24px auto;
+      padding: 24px 24px 40px;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      border-radius: 10px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      font-weight: 700;
+      color: #555;
+    }
+
+    .header-text {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 0.02em;
+    }
+
+    .subtitle {
+      margin-top: 4px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    .contact {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    .contact a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 8px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 4px;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .section {
+      margin-bottom: 18px;
+    }
+
+    .job {
+      margin-bottom: 14px;
+    }
+
+    .job-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 4px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .job-title {
+      color: #333;
+    }
+
+    .job-dates {
+      color: #777;
+      font-size: 13px;
+    }
+
+    .job-location {
+      font-size: 13px;
+      color: #777;
+    }
+
+    ul {
+      margin: 4px 0 4px 18px;
+      padding: 0;
+      font-size: 14px;
+    }
+
+    li {
+      margin-bottom: 2px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin: 6px 0;
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #333;
+    }
+
+    .small {
+      font-size: 13px;
+    }
+
+    .two-col-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 16px;
+    }
+
+    @media (max-width: 600px) {
+      .two-col-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <!-- Optional: replace avatar with <img src="yourphoto.jpg" class="avatar" alt="Profile photo"> -->
+      <div class="avatar">AC</div>
+      <div class="header-text">
+        <h1>Antonio de Jesús Cortes Lagunes</h1>
+        <div class="subtitle">Software Architect &amp; Engineer &mdash; 10+ Years of Experience</div>
+        <div class="contact">
+          Email: <a href="mailto:antonio.cortes.lagunes@hotmail.com">antonio.cortes.lagunes@hotmail.com</a> |
+          Phone: <a href="tel:+14084836069">+1 (408) 483-6069</a><br />
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/antonio-de-jesus-cortes-lagunes-b42640155/" target="_blank">
+            linkedin.com/in/antonio-de-jesus-cortes-lagunes-b42640155
+          </a><br />
+          GitHub:
+          <a href="https://github.com/antonianemi" target="_blank">
+            github.com/antonianemi
+          </a><br />
+          Alternate email:
+          <a href="mailto:antoniosistemascomputacionales@hotmail.com">antoniosistemascomputacionales@hotmail.com</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- Left column -->
+      <main>
+        <!-- Professional Summary -->
+        <section class="section">
+          <h2>Professional Summary</h2>
+          <p class="small">
+            Software Architect with over a decade of experience designing and implementing scalable, innovative
+            solutions in critical sectors such as health technology, fintech, and telecommunications. Currently
+            leading the development of a cutting-edge platform leveraging advanced sensor technology to revolutionize
+            motor skill diagnostics and rehabilitation in the U.S. Proven ability to deliver impactful, user-focused
+            solutions that address societal challenges and align with national priorities in technological and
+            healthcare innovation.
+          </p>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="section">
+          <h2>Professional Experience</h2>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-title">Software Architect &amp; Technical Leader &mdash; Verizon / Tracfone</div>
+              <div class="job-dates">2024 &ndash; Present</div>
+            </div>
+            <div class="job-location">Remote / USA</div>
+            <ul>
+              <li>Implemented eSIM support for Android within MVA client, enabling seamless setup for millions of users.</li>
+              <li>Provided Level 2 support for critical iOS MVA applications, ensuring 99.9% uptime and high reliability.</li>
+              <li>Optimized telecom processes, contributing to a 20% reduction in support response times.</li>
+              <li>Led cross-platform rollout of ForgeRock for Android and iOS (Tracfone), collaborating with backend and iOS teams to deliver secure authentication for millions of users.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Android</span>
+              <span class="tag">iOS</span>
+              <span class="tag">eSIM</span>
+              <span class="tag">ForgeRock</span>
+              <span class="tag">Telecom</span>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-title">Software Architect &mdash; Capital One</div>
+              <div class="job-dates">2023 &ndash; 2023</div>
+            </div>
+            <div class="job-location">Remote / USA</div>
+            <ul>
+              <li>Migrated legacy systems from monolithic to plugin-based modular architectures, improving scalability by ~40%.</li>
+              <li>Designed and implemented features for credit card promotions, contributing to a 25% increase in customer engagement.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Modular Architecture</span>
+              <span class="tag">Fintech</span>
+              <span class="tag">Credit Card Promotions</span>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-title">Senior Mobile Developer &mdash; Omega Ortega</div>
+              <div class="job-dates">2017 &ndash; 2023</div>
+            </div>
+            <div class="job-location">Remote / USA &amp; Mexico</div>
+            <ul>
+              <li><strong>KORUMATSU</strong>: Built the full iOS app from scratch to allow users to register for tournaments and classes, plus an Android version (pending Play Store release).</li>
+              <li><strong>Arvest Go</strong>: Contributed enhancements to a mobile banking app used by 100,000+ clients.</li>
+              <li><strong>Arvest EXP</strong>: Created an internal app to showcase new banking technologies to employees.</li>
+              <li><strong>Arvest Pop Corn</strong>: Developed a marketing app that engaged walk-in users through playful on-screen animations.</li>
+              <li><strong>Iron Mountain &mdash; Art of the Possible</strong>: Contributed iOS features for a storage-management app targeted to 5,000+ users managing their belongings.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">iOS</span>
+              <span class="tag">Android</span>
+              <span class="tag">Banking</span>
+              <span class="tag">Internal Tools</span>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-title">Software Architect &mdash; Fabricantes de Básculas Torrey</div>
+              <div class="job-dates">2016 &ndash; 2017</div>
+            </div>
+            <div class="job-location">Monterrey, Mexico</div>
+            <ul>
+              <li><strong>Cool Manager</strong>: Developed a Bluetooth-enabled iOS app (iPad) for refrigerator control, allowing 5,000+ industrial users to manage temperature, fans, and lighting in real time. Rebuilt the UI using Xamarin, improving usability and functionality.</li>
+              <li><strong>Scale Link (Mobile &amp; Desktop)</strong>: Maintained and evolved Windows, Android, and iOS apps connecting scales via Wi-Fi, used by 1,000+ businesses worldwide and supporting millions of transactions annually.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Xamarin</span>
+              <span class="tag">Bluetooth</span>
+              <span class="tag">IoT</span>
+              <span class="tag">Desktop &amp; Mobile</span>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-title">Software Architect &mdash; DEINTEC (Farmacias Benavides)</div>
+              <div class="job-dates">2016</div>
+            </div>
+            <div class="job-location">Mexico</div>
+            <ul>
+              <li>Led the web solution replacing a legacy desktop application for Farmacias Benavides.</li>
+              <li>Improved accessibility for 1,200+ stores nationwide and supported millions of transactions annually.</li>
+              <li>Reduced maintenance costs by an estimated 30%&ndash;40% via migration to web-based infrastructure.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-title">Software Architect / Developer &mdash; Grupo Zego (Grupo Reyes Kuri)</div>
+              <div class="job-dates">2015 &ndash; 2015</div>
+            </div>
+            <div class="job-location">Mexico</div>
+            <ul>
+              <li><strong>Zego Migration (Hydra)</strong>: Migrated 500,000+ records from Visual FoxPro to SQL Server, improving data processing time by 30%&ndash;50% across 10+ databases.</li>
+              <li><strong>Zego Mobile</strong>: Designed a cross-platform mobile app (Xamarin) enabling clients to view real-time reports and perform custom queries, reducing manual communication by 40%&ndash;60%.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <div class="job-title">Software Developer &mdash; TV Azteca</div>
+              <div class="job-dates">2014 &ndash; 2014</div>
+            </div>
+            <div class="job-location">Mexico City, Mexico</div>
+            <ul>
+              <li><strong>Limpiemos México (Android App)</strong>: Enabled ~86,000 users (10% of campaign participants) to log ~860,000 trash entries, significantly improving environmental campaign insights.</li>
+              <li><strong>CATI (Web Module with Auto Dialer)</strong>: Built a web module integrated with an automatic dialer, increasing survey call capacity by 50%&ndash;70% (~300,000&ndash;340,000 calls/month).</li>
+              <li><strong>Edition Rules</strong>: Processed TV viewership data for 58.5 million households, improving engagement and ad revenue by 5%&ndash;10% through better programming decisions.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Academic Research -->
+        <section class="section">
+          <h2>Academic Research &mdash; Digital Image Processing</h2>
+          <h3>Anomaly Detection in Agricultural Products</h3>
+          <ul>
+            <li>Designed and implemented image-processing algorithms to detect anomalies in 1,000+ oranges during a university research project.</li>
+            <li>Achieved 90% accuracy using techniques such as image segmentation, edge detection, and pattern recognition.</li>
+            <li>Processed 100+ images per hour, demonstrating scalability for real-time diagnostics.</li>
+            <li>Showcased the potential of automation in quality control for agricultural products, laying groundwork for future applications in healthcare and diagnostics.</li>
+          </ul>
+        </section>
+      </main>
+
+      <!-- Right column -->
+      <aside>
+        <!-- Technical Skills -->
+        <section class="section">
+          <h2>Technical Skills</h2>
+
+          <h3>Languages &amp; Frameworks</h3>
+          <ul class="small">
+            <li>Swift, Kotlin, Java, C#, .NET</li>
+            <li>Xamarin, Android SDK, iOS SDK</li>
+            <li>SQL, SQLite</li>
+            <li>HTML, CSS, JavaScript, ASP.NET, jQuery</li>
+          </ul>
+
+          <h3>Architectures &amp; Design</h3>
+          <ul class="small">
+            <li>Plugin-based systems, modular monoliths, microservices</li>
+            <li>MVC, MVP, MVVM, Delegation, Singleton</li>
+            <li>Dependency Injection (e.g., Dagger)</li>
+            <li>Blocks, Closures, Callbacks with interfaces</li>
+          </ul>
+
+          <h3>Mobile Networking &amp; Concurrency</h3>
+          <div class="two-col-list small">
+            <ul>
+              <li>REST &amp; SOAP web services</li>
+              <li>NSURLSession, NSURLConnection</li>
+              <li>JSON &amp; XML integration</li>
+              <li>Sockets (Wi-Fi devices, scales)</li>
+            </ul>
+            <ul>
+              <li>NSOperation, Grand Central Dispatch (GCD)</li>
+              <li>Android multithreading for UI &amp; backend</li>
+              <li>Background tasks and synchronization</li>
+            </ul>
+          </div>
+
+          <h3>UI / UX</h3>
+          <ul class="small">
+            <li>Auto Layout &amp; Size Classes using Storyboards and XIBs</li>
+            <li>Custom controls and dynamic content programmatically</li>
+            <li>Stack views and responsive layouts for multiple screen sizes</li>
+          </ul>
+
+          <h3>Data Persistence</h3>
+          <ul class="small">
+            <li>Core Data, SQLite, NSUserDefaults, Keychain, File System, iCloud</li>
+          </ul>
+
+          <h3>iOS Frameworks</h3>
+          <ul class="small">
+            <li>MapKit, Core Location, Core Bluetooth</li>
+            <li>Core Animation, Core Graphics, UIKit, CloudKit, CoreData</li>
+          </ul>
+
+          <h3>Tools &amp; Practices</h3>
+          <ul class="small">
+            <li>Git, Bitbucket, GitLab, GitHub Desktop, SourceTree, Tower</li>
+            <li>Jenkins, Jira, Scrum / Agile methodologies</li>
+            <li>Figma for UI/UX design collaboration</li>
+          </ul>
+
+          <h3>Domain Expertise</h3>
+          <ul class="small">
+            <li>Healthtech and motor-skill diagnostics</li>
+            <li>Fintech &amp; telecom integration</li>
+            <li>Image processing &amp; pattern recognition (90% accuracy anomaly detection)</li>
+          </ul>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+          <h2>Education</h2>
+          <p class="small">
+            <strong>Bachelor’s Degree in Computer Science</strong><br />
+            Tecnológico Superior de Misantla, 2017
+          </p>
+        </section>
+
+        <!-- Certifications -->
+        <section class="section">
+          <h2>Certifications &amp; Training</h2>
+          <ul class="small">
+            <li>Android Development Congress &mdash; Tecnológico Superior de Misantla</li>
+            <li>Developer 5 Stars &mdash; Microsoft</li>
+            <li>Microsoft Virtual Academy</li>
+            <li>WWDC Event &mdash; Mountain View, California</li>
+            <li>360|iDev 2018 Conference &mdash; Denver</li>
+          </ul>
+        </section>
+
+        <!-- Awards & Talks -->
+        <section class="section">
+          <h2>Awards &amp; Acknowledgements</h2>
+          <p class="small">
+            Has delivered talks and conferences at Tecnológico Superior de Misantla, sharing experience in mobile
+            development, architecture, and industry best practices with students and faculty.
+          </p>
+        </section>
+
+        <!-- Languages -->
+        <section class="section">
+          <h2>Languages</h2>
+          <ul class="small">
+            <li>Spanish: Native</li>
+            <li>English: Fluent</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
