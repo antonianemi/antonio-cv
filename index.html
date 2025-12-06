@@ -174,6 +174,226 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Employment Letters Section */
+    .letters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .letter-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fafafa;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .letter-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-color: #0056b3;
+    }
+
+    .letter-preview {
+      width: 100%;
+      height: 150px;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      color: #ccc;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+    }
+
+    .letter-preview.has-file {
+      background: #e8f0fe;
+    }
+
+    .letter-preview.has-file::before {
+      content: "📄";
+      font-size: 48px;
+    }
+
+    .letter-info {
+      padding: 12px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .letter-company {
+      font-weight: 600;
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .letter-status {
+      font-size: 12px;
+      margin-bottom: 8px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    .letter-status.signed {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .letter-status.pending {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .letter-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .letter-btn {
+      flex: 1;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .letter-btn-download {
+      background: #0056b3;
+      color: white;
+    }
+
+    .letter-btn-download:hover {
+      background: #004085;
+    }
+
+    .letter-btn-download:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    .letter-btn-preview {
+      background: #e8f0fe;
+      color: #0056b3;
+      border: 1px solid #0056b3;
+    }
+
+    .letter-btn-preview:hover {
+      background: #0056b3;
+      color: white;
+    }
+
+    .letter-btn-preview:disabled {
+      background: #f0f0f0;
+      color: #ccc;
+      border-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal.show {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 800px;
+      max-height: 85vh;
+      overflow: auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 12px;
+    }
+
+    .modal-header h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .modal-close {
+      font-size: 28px;
+      font-weight: bold;
+      color: #aaa;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    .modal-close:hover {
+      color: #000;
+    }
+
+    .modal-pdf {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .modal-footer {
+      margin-top: 16px;
+      text-align: right;
+    }
+
+    .modal-footer a {
+      display: inline-block;
+      padding: 10px 16px;
+      background: #0056b3;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-left: 8px;
+    }
+
+    .modal-footer a:hover {
+      background: #004085;
+    }
   </style>
 </head>
 <body>
@@ -261,6 +481,21 @@
 
           <div class="job">
             <div class="job-header">
+              <div class="job-title">Software Engineer &mdash; Cognizant</div>
+              <div class="job-dates">05/15/2023 &ndash; Present</div>
+            </div>
+            <div class="job-location">Remote / USA</div>
+            <ul>
+              <li>Contributed to enterprise solutions for U.S. clients (role and projects to be updated by user).</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Consulting</span>
+              <span class="tag">Enterprise</span>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
               <div class="job-title">Senior Mobile Developer &mdash; Omega Ortega</div>
               <div class="job-dates">2017 &ndash; 2023</div>
             </div>
@@ -283,7 +518,7 @@
           <div class="job">
             <div class="job-header">
               <div class="job-title">Software Architect &mdash; Fabricantes de Básculas Torrey</div>
-              <div class="job-dates">2016 &ndash; 2017</div>
+              <div class="job-dates">12/2015 &ndash; 04/2017</div>
             </div>
             <div class="job-location">Monterrey, Mexico</div>
             <ul>
@@ -301,7 +536,7 @@
           <div class="job">
             <div class="job-header">
               <div class="job-title">Software Architect &mdash; DEINTEC (Farmacias Benavides)</div>
-              <div class="job-dates">2016</div>
+              <div class="job-dates">05/2015 &ndash; 12/2015</div>
             </div>
             <div class="job-location">Mexico</div>
             <ul>
@@ -313,8 +548,8 @@
 
           <div class="job">
             <div class="job-header">
-              <div class="job-title">Software Architect / Developer &mdash; Grupo Zego (Grupo Reyes Kuri)</div>
-              <div class="job-dates">2015 &ndash; 2015</div>
+              <div class="job-title">Software Architect / Developer &mdash; KROM (Grupo Reyes Kuri)</div>
+              <div class="job-dates">07/2014 &ndash; 04/2015</div>
             </div>
             <div class="job-location">Mexico</div>
             <ul>
@@ -325,15 +560,86 @@
 
           <div class="job">
             <div class="job-header">
-              <div class="job-title">Software Developer &mdash; TV Azteca</div>
-              <div class="job-dates">2014 &ndash; 2014</div>
+              <div class="job-title">Software Developer &mdash; Kode (Nuevos Caminos)</div>
+              <div class="job-dates">06/2014 &ndash; 07/2014</div>
             </div>
-            <div class="job-location">Mexico City, Mexico</div>
+            <div class="job-location">Mexico</div>
             <ul>
               <li><strong>Limpiemos México (Android App)</strong>: Enabled ~86,000 users (10% of campaign participants) to log ~860,000 trash entries, significantly improving environmental campaign insights.</li>
               <li><strong>CATI (Web Module with Auto Dialer)</strong>: Built a web module integrated with an automatic dialer, increasing survey call capacity by 50%&ndash;70% (~300,000&ndash;340,000 calls/month).</li>
               <li><strong>Edition Rules</strong>: Processed TV viewership data for 58.5 million households, improving engagement and ad revenue by 5%&ndash;10% through better programming decisions.</li>
             </ul>
+          </div>
+        </section>
+
+        <!-- Employment Letters -->
+        <section class="section">
+          <h2>Employment Letters</h2>
+          <div class="letters-grid">
+            <!-- Torrey -->
+            <div class="letter-card" data-company="torrey">
+              <div class="letter-preview has-file"></div>
+              <div class="letter-info">
+                <div class="letter-company">Torrey</div>
+                <span class="letter-status signed">Signed</span>
+                <div class="letter-actions">
+                  <button class="letter-btn letter-btn-preview" onclick="openModal('torrey')">Preview</button>
+                  <a href="letters/torrey.pdf" class="letter-btn letter-btn-download" download style="text-decoration: none;">Download</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- KROM -->
+            <div class="letter-card" data-company="krom">
+              <div class="letter-preview has-file"></div>
+              <div class="letter-info">
+                <div class="letter-company">KROM</div>
+                <span class="letter-status signed">Signed</span>
+                <div class="letter-actions">
+                  <button class="letter-btn letter-btn-preview" onclick="openModal('krom')">Preview</button>
+                  <a href="letters/krom.pdf" class="letter-btn letter-btn-download" download style="text-decoration: none;">Download</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- DEINTEC -->
+            <div class="letter-card" data-company="deintec">
+              <div class="letter-preview has-file"></div>
+              <div class="letter-info">
+                <div class="letter-company">DEINTEC</div>
+                <span class="letter-status signed">Signed</span>
+                <div class="letter-actions">
+                  <button class="letter-btn letter-btn-preview" onclick="openModal('deintec')">Preview</button>
+                  <a href="letters/deintec.pdf" class="letter-btn letter-btn-download" download style="text-decoration: none;">Download</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kode -->
+            <div class="letter-card" data-company="kode">
+              <div class="letter-preview has-file"></div>
+              <div class="letter-info">
+                <div class="letter-company">Kode</div>
+                <span class="letter-status signed">Signed</span>
+                <div class="letter-actions">
+                  <button class="letter-btn letter-btn-preview" onclick="openModal('kode')">Preview</button>
+                  <a href="letters/kode.pdf" class="letter-btn letter-btn-download" download style="text-decoration: none;">Download</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cognizant -->
+            <div class="letter-card" data-company="cognizant">
+              <div class="letter-preview has-file"></div>
+              <div class="letter-info">
+                <div class="letter-company">Cognizant</div>
+                <span class="letter-status signed">Signed</span>
+                <div class="letter-actions">
+                  <button class="letter-btn letter-btn-preview" onclick="openModal('cognizant')">Preview</button>
+                  <a href="letters/cognizant.pdf" class="letter-btn letter-btn-download" download style="text-decoration: none;">Download</a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -461,5 +767,61 @@
       </aside>
     </div>
   </div>
+
+  <!-- Modal for PDF Preview -->
+  <div id="pdfModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle">Employment Letter</h2>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <iframe id="pdfViewer" class="modal-pdf"></iframe>
+      <div class="modal-footer">
+        <a id="modalDownloadBtn" href="#" download>Download PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(company) {
+      const modal = document.getElementById('pdfModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const pdfViewer = document.getElementById('pdfViewer');
+      const downloadBtn = document.getElementById('modalDownloadBtn');
+      
+      const pdfPath = `letters/${company}.pdf`;
+      const companyName = company.replace('-', ' ').toUpperCase();
+      
+      // Check if file exists
+      fetch(pdfPath, { method: 'HEAD' })
+        .then(response => {
+          if (response.ok) {
+            modalTitle.textContent = `${companyName} - Employment Letter`;
+            pdfViewer.src = pdfPath;
+            downloadBtn.href = pdfPath;
+            modal.classList.add('show');
+          } else {
+            alert('PDF file not found. Please make sure the file has been uploaded.');
+          }
+        })
+        .catch(() => {
+          alert('PDF file not found. Please make sure the file has been uploaded.');
+        });
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('pdfModal');
+      modal.classList.remove('show');
+      document.getElementById('pdfViewer').src = '';
+    }
+
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+      const modal = document.getElementById('pdfModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
 </body>
 </html>
