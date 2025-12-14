@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Antonio de Jesús Cortes Lagunes - Education</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+    :root {
+      --bg: #f7f5f1;
+      --card: #ffffff;
+      --text: #1f1f1f;
+      --muted: #5c5c5c;
+      --border: #e4dfd4;
+      --accent: #243a73;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 32px;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .page {
+      max-width: 900px;
+      margin: 32px auto 64px;
+      padding: 48px 48px 64px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', 'Inter', serif;
+      font-size: 32px;
+      letter-spacing: 0.5px;
+      margin: 0 0 8px 0;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .section {
+      margin-bottom: 24px;
+    }
+
+    h2, h3 {
+      font-family: 'Playfair Display', 'Inter', serif;
+      margin: 0 0 10px 0;
+    }
+
+    h2 { font-size: 20px; letter-spacing: 0.3px; }
+    h3 { font-size: 16px; }
+
+    .card {
+      background: #faf8f4;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+      margin-bottom: 14px;
+    }
+
+    .small { font-size: 14px; color: var(--muted); margin: 0; }
+
+    ul.small {
+      padding-left: 18px;
+      margin: 8px 0 0 0;
+    }
+
+    .cert-visual {
+      margin-top: 12px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .cert-visual img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    @media (max-width: 900px) {
+      .top-nav { flex-wrap: wrap; gap: 8px; }
+      .nav-links { width: 100%; justify-content: center; }
+      .page { padding: 32px 24px 48px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-brand">Antonio Cortes</div>
+    <div class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="experience.html">Professional Experience</a>
+      <a href="skills.html">Technical Skills</a>
+      <a href="education.html">Education</a>
+    </div>
+  </nav>
+
+  <div class="page">
+    <header class="hero">
+      <h1>Education &amp; Credentials</h1>
+      <div class="subtitle">Academic background, certifications, awards, and languages</div>
+    </header>
+
+    <section class="section">
+      <h2>Education</h2>
+      <div class="card">
+        <p class="small">
+          <strong>Bachelor’s Degree in Computer Science</strong><br />
+          Tecnológico Superior de Misantla, 2017
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Certifications &amp; Training</h2>
+      <div class="card">
+        <ul class="small">
+          <li>
+            <strong>Fundamentos del Software</strong> &mdash; EscuelaIT (50h) — Certificado emitido 26/11/2025 —
+            <a href="https://escuela.it/certificado/CERT-C4Dg9M6r" target="_blank" rel="noopener">Ver certificado</a>
+          </li>
+          <li>Android Development Congress &mdash; Tecnológico Superior de Misantla</li>
+          <li>Developer 5 Stars &mdash; Microsoft</li>
+          <li>Microsoft Virtual Academy</li>
+          <li>WWDC Event &mdash; Mountain View, California</li>
+          <li>360|iDev 2018 Conference &mdash; Denver</li>
+        </ul>
+        <div class="cert-visual">
+          <img src="assets/escuelait-fundamentos-software.png" alt="Certificado EscuelaIT - Fundamentos del Software" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Awards &amp; Acknowledgements</h2>
+      <div class="card">
+        <p class="small">
+          Has delivered talks and conferences at Tecnológico Superior de Misantla, sharing experience in mobile
+          development, architecture, and industry best practices with students and faculty.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Languages</h2>
+      <div class="card">
+        <ul class="small">
+          <li>Spanish: Native</li>
+          <li>English: Fluent</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

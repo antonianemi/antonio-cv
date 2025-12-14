@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Antonio de Jesús Cortes Lagunes - Professional Experience</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+    :root {
+      --bg: #f7f5f1;
+      --card: #ffffff;
+      --text: #1f1f1f;
+      --muted: #5c5c5c;
+      --border: #e4dfd4;
+      --accent: #243a73;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 32px;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 32px auto 64px;
+      padding: 48px 48px 64px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', 'Inter', serif;
+      font-size: 32px;
+      letter-spacing: 0.5px;
+      margin: 0 0 8px 0;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .contact {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 32px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', 'Inter', serif;
+      font-size: 20px;
+      letter-spacing: 0.4px;
+      margin: 0 0 12px 0;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin: 12px 0 6px 0;
+    }
+
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section p,
+    .section ul {
+      margin: 8px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .section ul { padding-left: 18px; }
+
+    .company-block {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 18px 12px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .company-heading {
+      font-family: 'Playfair Display', 'Inter', serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      margin: 0 0 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .company-heading strong {
+      font-weight: 700;
+    }
+
+    .job { margin-top: 6px; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .job-title {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .job-dates {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .job-location {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 8px 0 0 0;
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #eef0f7;
+      color: #2f3b57;
+    }
+
+    aside .section {
+      background: #faf8f4;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 14px 10px;
+    }
+
+    .two-col-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 4px 16px;
+    }
+
+    .small {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      .top-nav { flex-wrap: wrap; gap: 8px; }
+      .nav-links { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-brand">Antonio Cortes</div>
+    <div class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="#experience">Professional Experience</a>
+      <a href="skills.html">Technical Skills</a>
+      <a href="education.html">Education</a>
+    </div>
+  </nav>
+
+  <div class="page">
+    <header class="hero">
+      <h1>Professional Experience</h1>
+      <div class="subtitle">Detailed roles, projects, and clients</div>
+    </header>
+
+    <div class="layout">
+      <main>
+        <section class="section" id="experience">
+          <h2>Professional Experience</h2>
+
+          <div class="company-block">
+            <div class="company-heading">
+              <strong><a href="https://kode.com.mx/" target="_blank" rel="noopener">KODE (WebLink)</a></strong>
+            </div>
+            <div class="job">
+              <div class="job-header">
+                <div class="job-title">Software Developer &mdash; Client: TV Azteca</div>
+                <div class="job-dates">06/2014 &ndash; 07/2014</div>
+              </div>
+              <div class="job-location">Mexico</div>
+              <ul>
+                <li><strong>Limpiemos México (Android App)</strong>: Delivered for TV Azteca; enabled ~86,000 users (10% of campaign participants) to log ~860,000 trash entries, improving environmental campaign insights.</li>
+                <li><strong>CATI (Web Module with Auto Dialer)</strong>: Built a web module integrated with an automatic dialer, increasing survey call capacity by 50%&ndash;70% (~300,000&ndash;340,000 calls/month).</li>
+                <li><strong>Edition Rules</strong>: Processed TV viewership data for 58.5 million households, improving engagement and ad revenue by 5%&ndash;10% through better programming decisions.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="company-block">
+            <div class="company-heading">
+              <strong><a href="https://grupokrom.com/" target="_blank" rel="noopener">KROM (Web Link)</a></strong>
+            </div>
+            <div class="job">
+              <div class="job-header">
+                <div class="job-title">Software Architect / Developer</div>
+                <div class="job-dates">07/2014 &ndash; 04/2015</div>
+              </div>
+              <div class="job-location">Mexico</div>
+              <ul>
+                <li><strong>Zego Migration (Hydra)</strong>: Migrated 500,000+ records from Visual FoxPro to SQL Server, improving data processing time by 30%&ndash;50% across 10+ databases.</li>
+                <li><strong>Zego Mobile</strong>: Designed a cross-platform mobile app (Xamarin) enabling clients to view real-time reports and perform custom queries, reducing manual communication by 40%&ndash;60%.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="company-block">
+            <div class="company-heading">
+              <strong><a href="https://deintec.com/wordpress/" target="_blank" rel="noopener">DEINTEC (Web Link)</a></strong>
+            </div>
+            <div class="job">
+              <div class="job-header">
+                <div class="job-title">Software Architect &mdash; Client: Farmacias Benavides</div>
+                <div class="job-dates">05/2015 &ndash; 12/2015</div>
+              </div>
+              <div class="job-location">Mexico</div>
+              <ul>
+                <li>Led the web solution replacing a legacy desktop application for Farmacias Benavides.</li>
+                <li>Improved accessibility for 1,200+ stores nationwide and supported millions of transactions annually.</li>
+                <li>Reduced maintenance costs by an estimated 30%&ndash;40% via migration to web-based infrastructure.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="company-block">
+            <div class="company-heading"><strong>Fabricantes de Básculas Torrey (WebLink)</strong></div>
+            <div class="job">
+              <div class="job-header">
+                <div class="job-title">Software Architect</div>
+                <div class="job-dates">12/2015 &ndash; 04/2017</div>
+              </div>
+              <div class="job-location">Monterrey, Mexico</div>
+              <ul>
+                <li><strong>Cool Manager</strong>: Developed a Bluetooth-enabled iOS app (iPad) for refrigerator control, allowing 5,000+ industrial users to manage temperature, fans, and lighting in real time. Rebuilt the UI using Xamarin, improving usability and functionality.</li>
+                <li><strong>Scale Link (Mobile &amp; Desktop)</strong>: Maintained and evolved Windows, Android, and iOS apps connecting scales via Wi-Fi, used by 1,000+ businesses worldwide and supporting millions of transactions annually.</li>
+              </ul>
+              <div class="tag-list">
+                <span class="tag">Xamarin</span>
+                <span class="tag">Bluetooth</span>
+                <span class="tag">IoT</span>
+                <span class="tag">Desktop &amp; Mobile</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="company-block">
+            <div class="company-heading"><strong>Mobile Consulting Solutions (WebLink)</strong></div>
+            <div class="job">
+              <div class="job-header">
+                <div class="job-title">Mobile Consultant</div>
+                <div class="job-dates">04/2017 &ndash; 2017</div>
+              </div>
+              <div class="job-location">Mountain View</div>
+              <ul>
+                <li>Delivered mobile consulting and development services across multiple client engagements (details to be updated).</li>
+              </ul>
+              <div class="tag-list">
+                <span class="tag">Mobile</span>
+                <span class="tag">Consulting</span>
+                <span class="tag">iOS</span>
+                <span class="tag">Android</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="company-block">
+            <div class="company-heading"><strong>Omega Ortega</strong></div>
+            <div class="job">
+              <div class="job-header">
+                <div class="job-title">Senior Mobile Developer</div>
+                <div class="job-dates">2017 &ndash; 2023</div>
+              </div>
+              <div class="job-location">Arizona</div>
+              <ul>
+                <li><strong>KORUMATSU</strong>: Built the full iOS app from scratch to allow users to register for tournaments and classes, plus an Android version (pending Play Store release).</li>
+                <li><strong>Arvest Go</strong>: Contributed enhancements to a mobile banking app used by 100,000+ clients.</li>
+                <li><strong>Arvest EXP</strong>: Created an internal app to showcase new banking technologies to employees.</li>
+                <li><strong>Arvest Pop Corn</strong>: Developed a marketing app that engaged walk-in users through playful on-screen animations.</li>
+                <li><strong>Iron Mountain &mdash; Art of the Possible</strong>: Contributed iOS features for a storage-management app targeted to 5,000+ users managing their belongings.</li>
+              </ul>
+              <div class="tag-list">
+                <span class="tag">iOS</span>
+                <span class="tag">Android</span>
+                <span class="tag">Banking</span>
+                <span class="tag">Internal Tools</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="company-block">
+            <div class="company-heading">
+              <strong>
+                <a href="https://www.cognizant.com/us/en/engineering-ai-for-impact?cid=pse17509374090002-CMP-007888&amp;gad_source=1&amp;gad_campaignid=22718115756&amp;gbraid=0AAAAA_cffVJBiBPYM6GR8MjbcTgvz-MW-&amp;gclid=CjwKCAiA0eTJBhBaEiwA-Pa-hSQuyoWxxMD7nwMvWpbVo9P-hSI_gTfEm9OV2BOva1u2N3THizMjKBoCUtIQAvD_BwE" target="_blank" rel="noopener">COGNIZANT</a>
+              </strong>
+            </div>
+            <div class="job">
+              <div class="job-header">
+                <div class="job-title">Software Engineer</div>
+                <div class="job-dates">05/15/2023 &ndash; Present</div>
+              </div>
+              <div class="job-location">Remote / USA</div>
+              <ul>
+                <li>Contributed to enterprise solutions for U.S. clients (role and projects to be updated by user).</li>
+              </ul>
+              <div class="tag-list">
+                <span class="tag">Consulting</span>
+                <span class="tag">Enterprise</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Academic Research &mdash; Digital Image Processing</h2>
+          <h3>Anomaly Detection in Agricultural Products</h3>
+          <ul>
+            <li>Designed and implemented image-processing algorithms to detect anomalies in 1,000+ oranges during a university research project.</li>
+            <li>Achieved 90% accuracy using techniques such as image segmentation, edge detection, and pattern recognition.</li>
+            <li>Processed 100+ images per hour, demonstrating scalability for real-time diagnostics.</li>
+            <li>Showcased the potential of automation in quality control for agricultural products, laying groundwork for future applications in healthcare and diagnostics.</li>
+          </ul>
+        </section>
+      </main>
+
+      <aside>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
